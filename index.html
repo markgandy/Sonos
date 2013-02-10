@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Sonos Controller</title>
+
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/foundation/app.css">
+	<link rel="stylesheet" href="stylesheets/foundation/foundation.min.css">
+
+	<script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+</head>
+
+<body>
+	
+	<!-- Latest version of jQuery -->
+	<script src="javascripts/jquery.min.js"></script>
+
+	<div class="row">
+		<div class="twelve columns">
+			<h2>Sonos Controller</h2>
+			<p>Free your music!</p>
+			<hr />
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="eight columns">
+
+			<p>
+				<a href="javascript:void(0)" onclick="invokeSonos('Play', false);" id="playButton" class="button">Play</a>
+				<a href="javascript:void(0)" onclick="invokeSonos('Pause', false);" id="pauseButton" class="button" style="display: none;">Pause</a>
+			</p>
+			<p>
+				<a href="javascript:void(0)" onclick="invokeSonos('Next', false);" class="button">Next</a>
+				<a href="javascript:void(0)" onclick="invokeSonos('Previous', false);" class="button">Previous</a>
+				<a href="javascript:void(0)" onclick="invokeSonos('GetTransportInfo', true);" class="button">GetTransportInfo</a>
+				<a href="javascript:void(0)" onclick="invokeSonos('GetPositionInfo', true);" class="button">GetPositionInfo</a>
+			</p>
+
+			<dl class="tabs">
+				<dd class="active"><a href="#nowPlaying">Now Playing</a></dd>
+				<dd><a href="#library">Library</a></dd>
+			</dl>
+
+			<ul class="tabs-content">
+
+				<li class="active" id="nowPlayingTab">
+					<div class="eight columns">
+						<div class="panel radius">
+							<div class="row">
+								<div class="four columns">
+									<p>Track:</p>
+								</div>
+								<div class="eight columns">
+									<pi id="currentTrack"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="four columns">
+									<p>Artist:</p>
+								</div>
+								<div class="eight columns">
+									<p id="currentArtist"></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="four columns">
+									<p>Album:</p>
+								</div>
+								<div class="eight columns">
+									<p id="currentAlbum"></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li id="libraryTab">
+					Library....
+				</li>
+
+			</ul>
+
+		</div>
+
+	</div>
+  
+	<!-- Included JS Files (Minified) -->
+	<script src="javascripts/foundation/foundation.min.js"></script>
+
+	<!-- Application Javascript, safe to override -->
+	<script src="javascripts/foundation/app.js"></script>
+
+	<script src="javascripts/sonos.js"></script>
+
+</body>
+
+</html>
