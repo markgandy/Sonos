@@ -37,14 +37,14 @@
 		<div class="eight columns">
 
 			<p>
-				<a href="javascript:void(0)" onclick="invokeSonos('Play', false);" id="playButton" class="button">Play</a>
-				<a href="javascript:void(0)" onclick="invokeSonos('Pause', false);" id="pauseButton" class="button" style="display: none;">Pause</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.play();" id="playButton" class="button">Play</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.pause();" id="pauseButton" class="button" style="display: none;">Pause</a>
 			</p>
 			<p>
-				<a href="javascript:void(0)" onclick="invokeSonos('Next', false);" class="button">Next</a>
-				<a href="javascript:void(0)" onclick="invokeSonos('Previous', false);" class="button">Previous</a>
-				<a href="javascript:void(0)" onclick="invokeSonos('GetTransportInfo', true);" class="button">GetTransportInfo</a>
-				<a href="javascript:void(0)" onclick="invokeSonos('GetPositionInfo', true);" class="button">GetPositionInfo</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.next();" class="button">Next</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.previous();" class="button">Previous</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.getTransportInfo();" class="button">GetTransportInfo</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.getPositionInfo();" class="button">GetPositionInfo</a>
 			</p>
 
 			<dl class="tabs">
