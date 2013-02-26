@@ -9,26 +9,15 @@ var sonosSystem = (function () {
 	var currentAction;
 	var track = {};
 
-	return {
-		play: function() {
-			callAction('Play');
-		},
-		pause: function() {
-			callAction('Pause');
-		},
-		next: function() {
-			callAction('Next');
-		},
-		previous: function() {
-			callAction('Previous');
-		},
-		getTransportInfo: function() {
-			callAction('GetTransportInfo');
-		},
-		getPositionInfo: function() {
-			callAction('GetPositionInfo');
+	var ACTIONS = ['Play', 'Pause', 'Next', 'Previous', 'GetTransportInfo', 'GetPositionInfo'];
+	
+	var objectToReturn = {};
+	ACTIONS.forEach(function(action) {
+		objectToReturn['invoke' + action] = function() {
+			callAction(action);
 		}
-	}
+	});
+	return objectToReturn;
 
 	function callAction(action) {
 		currentAction = action;
@@ -103,6 +92,6 @@ var sonosSystem = (function () {
 }());
 
 $(document).ready(function() {
-	sonosSystem.getTransportInfo();
-	sonosSystem.getPositionInfo();
+	sonosSystem.invokeGetTransportInfo();
+	sonosSystem.invokeGetPositionInfo();
 });

@@ -37,14 +37,12 @@
 		<div class="eight columns">
 
 			<p>
-				<a href="javascript:void(0)" onclick="sonosSystem.play();" id="playButton" class="button">Play</a>
-				<a href="javascript:void(0)" onclick="sonosSystem.pause();" id="pauseButton" class="button" style="display: none;">Pause</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.invokePlay();" id="playButton" class="button">Play</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.invokePause();" id="pauseButton" class="button" style="display: none;">Pause</a>
 			</p>
 			<p>
-				<a href="javascript:void(0)" onclick="sonosSystem.next();" class="button">Next</a>
-				<a href="javascript:void(0)" onclick="sonosSystem.previous();" class="button">Previous</a>
-				<a href="javascript:void(0)" onclick="sonosSystem.getTransportInfo();" class="button">GetTransportInfo</a>
-				<a href="javascript:void(0)" onclick="sonosSystem.getPositionInfo();" class="button">GetPositionInfo</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.invokePrevious();" class="button">Previous</a>
+				<a href="javascript:void(0)" onclick="sonosSystem.invokeNext();" class="button">Next</a>
 			</p>
 
 			<dl class="tabs">
